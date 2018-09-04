@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-Gk-0VK">
+                                <rect key="frame" x="28" y="225" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKQ-Bk-XL9">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="changePickerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ll1-96-CTA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCC-s3-9XQ">
+                                <rect key="frame" x="0.0" y="40" width="375" height="24"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3l-6E-odt">
+                                <rect key="frame" x="0.0" y="170" width="375" height="60"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="Lines">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tCC-s3-9XQ" secondAttribute="trailing" id="1QL-zc-gXa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JKQ-Bk-XL9" secondAttribute="bottom" constant="20" id="3j8-IX-SnP"/>
+                            <constraint firstItem="tCC-s3-9XQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6wt-dn-bV5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JKQ-Bk-XL9" secondAttribute="trailing" constant="165" id="8Cz-ny-LwN"/>
+                            <constraint firstItem="tCC-s3-9XQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="DoK-LW-1sD"/>
+                            <constraint firstItem="JKQ-Bk-XL9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="FNe-66-hc9"/>
+                            <constraint firstItem="Q3l-6E-odt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W3Y-cN-NwV"/>
+                            <constraint firstItem="Q3l-6E-odt" firstAttribute="top" secondItem="tCC-s3-9XQ" secondAttribute="bottom" constant="106" id="W3g-KX-aES"/>
+                            <constraint firstItem="hYu-Gk-0VK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fJq-Wf-1hb"/>
+                            <constraint firstItem="Q3l-6E-odt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qc1-cU-Omn"/>
+                            <constraint firstItem="hYu-Gk-0VK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v9O-K1-Wyf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="tCC-s3-9XQ" id="g4E-Wz-cv0"/>
+                        <outlet property="okButton" destination="JKQ-Bk-XL9" id="Wzv-88-hyD"/>
+                        <outlet property="pickerView" destination="hYu-Gk-0VK" id="kq6-5j-JuV"/>
+                        <outlet property="questionsLabel" destination="Q3l-6E-odt" id="LJu-Aw-vTK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="11.244377811094454"/>
+        </scene>
+    </scenes>
+</document>
